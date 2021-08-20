@@ -96,6 +96,6 @@ function calcularAreaCuadrado() {
     const input = document.getElementById('InputCuadrado');
     const value = input.value;
     
-    const area = areaCuadrado(value)
+    const area = areaCuadrado(value);
     alert(area);
 }
