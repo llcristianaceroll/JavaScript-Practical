@@ -1,3 +1,10 @@
 # JavaScript-Practical
-# JavaScript-Practical
-# JavaScript-Practical
+
+...
+
+### Taller #1: figuras geométricas
+
+- Primero paso: definir las fórmulas
+- Segundo paso: implementar las fórmulas en JavaScript
+- Tercer paso: crear funciones
+- Cuarto paso: integrar JavaScript con HTML
