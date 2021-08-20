@@ -5,13 +5,13 @@ console.group('Cuadrados')
 // console.log("Los lados del cuadrado miden: " + ladoCuadrado + "cm");
 
 function perimetroCuadrado(lado) {
-    return lado * 4;
+    return lado * 4 + 'cm';
 } 
 
 // console.log("El premímetro del cuadrado es: " + perimetroCuadrado + "cm");
 
 function areaCuadrado(lado) {
-    return lado * lado + 'cm';
+    return lado * lado + 'cm^2';
 }
 
 // console.log("El área del cuadrado es: " + areaCuadrado + "cm^2");
@@ -38,12 +38,12 @@ console.group('Tríangulos')
 
 
 function perimetroTriangulo(lado1, lado2, base) {
-    return lado1 + lado2 + base;
+    return lado1 + lado2 + base + 'cm';
 } 
 // console.log("El premímetro del tríangulo es: " + perimetroTriangulo + "cm");
 
 function areaTriangulo(base, altura) {
-    return (base * altura) / 2;
+    return (base * altura) / 2 + 'cm^2';
 } 
 // console.log("El área del tríangulo es: " + areaTriangulo + "cm^2");
 
@@ -58,7 +58,7 @@ console.group('Círculos')
 
 // Diámetro
 function diametroCirculo(radio) {
-    return radio * 2;
+    return radio * 2 + 'cm';
 }
 // console.log("El diámetro del círculo es: " + diametroCirculo + "cm");
 
@@ -69,15 +69,33 @@ const PI = Math.PI;
 //Circunferencia
 function perimetroCriculo(radio) {
     const diametro = diametroCirculo(radio);
-    return diametro * PI;
+    return diametro * PI + 'cm';
 } 
 // console.log("El perímetro del círculo es: " + perimetroCriculo + "cm");
 
 
 //Área
 function areaCirculo(radio) {
-    return radio * radio * PI;
+    return radio * radio * PI + 'cm^2';
 } 
 // console.log("El área del círculo es: " + areaCirculo + "cm^2");
 
 console.groupEnd();
+
+// Aquí interactuamos con el HTML
+
+function calcularPerimetroCuadrado() {
+    const input = document.getElementById('InputCuadrado');
+    const value = input.value;
+    
+    const perimetro = perimetroCuadrado(value)
+    alert(perimetro);
+}
+
+function calcularAreaCuadrado() {
+    const input = document.getElementById('InputCuadrado');
+    const value = input.value;
+    
+    const area = areaCuadrado(value)
+    alert(area);
+}
