@@ -1,34 +1,33 @@
 // const precioOriginal = 120;
 // const descuento = 18;
-
+/*
 function calcularPrecioConDescuento(precio, descuento) {
     const porcentajePrecioConDescuento = 100 -  descuento;
     const precioConDescuento = (precio * porcentajePrecioConDescuento) / 100;
     return precioConDescuento;
 }
-/*
+
 const coupons = [
     "JuanDC_es_Batman",
     "pero_no_le_digas_a_nadie",
     "es_un_secreto",
 ];
-*/
-// function onClickButtonPriceDiscount(){
-//     const inputPrice = document.getElementById('InputPrice');
-//     const priceValue = inputPrice.value;
 
-//     const inputDiscount = document.getElementById('InputDiscount');
-//     const priceDiscount = inputDiscount.value;
+function onClickButtonPriceDiscount(){
+    const inputPrice = document.getElementById('InputPrice');
+    const priceValue = inputPrice.value;
 
-//     const precioConDescuento = calcularPrecioConDescuento(priceValue, priceDiscount);
+     const inputDiscount = document.getElementById('InputDiscount');
+     const priceDiscount = inputDiscount.value;
+
+     const precioConDescuento = calcularPrecioConDescuento(priceValue, priceDiscount);
     
-//     const resultP = document.getElementById('ResultP');
-//     resultP.innerText = 'El precio con descuento son: $' + precioConDescuento;
-    // console.log(precioConDescuento);
+     const resultP = document.getElementById('ResultP');
+     resultP.innerText = 'El precio con descuento son: $' + precioConDescuento;
+     console.log(precioConDescuento);
 
-//}
-
-
+}
+//Solucion 1
 function onClickButtonPriceDiscount(){
     const inputPrice = document.getElementById('InputPrice');
     const priceValue = inputPrice.value;
@@ -60,9 +59,7 @@ function onClickButtonPriceDiscount(){
         const resultP = document.getElementById('ResultP');
         resultP.innerText = 'El precio con cupon es: $' + precioConDescuento;
     }
-
-    
-
+*/
 
 // console.log({
 //     precioOriginal,
@@ -71,6 +68,45 @@ function onClickButtonPriceDiscount(){
 //     precioConDescuento
 // });
 
+//Solucion 2
+
+function calcularPrecioConDescuento(precio, descuento) {
+    const porcentajePrecioConDescuento = 100 -  descuento;
+    const precioConDescuento = (precio * porcentajePrecioConDescuento) / 100;
+    return precioConDescuento;
+}
+
+const coupons = [
+    "JuanDC_es_Batman",
+    "pero_no_le_digas_a_nadie",
+    "es_un_secreto",
+];
+
+function onClickButtonPriceDiscount(){
+    const inputPrice = document.getElementById('InputPrice');
+    const priceValue = inputPrice.value;
+
+    // const inputDiscount = document.getElementById('InputDiscount');
+    // const priceDiscount = inputDiscount.value;
+
+    const inputCoupon = document.getElementById('InputCoupon');
+    const couponValue = inputCoupon.value;    
+
+   
+    if (!coupons.includes(couponValue)) {
+        alert("El cupón " + couponValue + "no es válido");
+     } else if (couponValue === "JuanDC_es_Batman") {
+        discount = 15;
+     } else if (couponValue === "pero_no_le_digas_a_nadie") {
+        discount = 30;
+     } else if (couponValue === "es_un_secreto") {
+        discount = 25;
+     }
+    
+        const precioConDescuento = calcularPrecioConDescuento(priceValue, discount);
+        const resultP = document.getElementById('ResultP');
+        resultP.innerText = 'El precio con cupón es: $' + precioConDescuento;
+    }
 
 
 
