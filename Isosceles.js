@@ -14,3 +14,5 @@ function alturaTrianguloIsosceles(trianguloGrandeLadoA, trianguloGrandeLadoB, tr
         return trianguloGrandeAltura;
     }
 }
+
+// se dividio el triángulo isosceles en 2 triangulos pequeños, muy pro
