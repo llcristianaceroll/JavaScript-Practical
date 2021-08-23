@@ -15,11 +15,11 @@ const lista1 = [
     100,
     200,
     500,
-    //800,
+    300,
     40000000,
 ];
-
-const mitadLista1 = parseInt(lista1.length / 2);
+const listOrnedar = lista1.sort();
+const mitadLista1 = parseInt(listOrnedar.length / 2);
 
 function esPar(numero) {
 
@@ -32,7 +32,7 @@ function esPar(numero) {
 
 let mediana;
 
-if (esPar(lista1.length)) {
+if (esPar(listOrnedar.length)) {
     const elemento1 = lista1[mitadLista1 - 1];
     const elemento2 = lista1[mitadLista1];
     const promedioElemnto1y2 = calcularMediaAritmetica([
