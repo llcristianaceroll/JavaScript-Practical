@@ -11,14 +11,15 @@ function calcularMediaAritmetica(lista) {
     return promedioLista;
 }
 
-const lista1 = [
-    100,
-    200,
-    500,
-    300,
-    40000000,
-];
-const listOrnedar = lista1.sort();
+const lista1 = [];
+
+const cuantosNumeros = parseInt(prompt('ingresa la cantidad de numeros del array'));
+for(var i = 0; i < cuantosNumeros; i++) {
+const valores = parseInt(prompt('ingresa los valores para calcular el promedio o la mediana'));
+lista1.push(valores);
+}
+
+const listOrnedar = lista1.sort(function(a, b) {return a - b});
 const mitadLista1 = parseInt(listOrnedar.length / 2);
 
 function esPar(numero) {
